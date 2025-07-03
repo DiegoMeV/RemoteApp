@@ -1,0 +1,3 @@
+.container-sidebar {
+  @apply relative max-w-[288px] border-r border-gray-300 dark:border-gray-700;
+}

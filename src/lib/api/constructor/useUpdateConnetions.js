@@ -1,0 +1,29 @@
+import { useMutation } from '@tanstack/react-query'
+
+import { baseUrls, useApiRequest } from '@/lib'
+import { useStoreState } from 'easy-peasy'
+
+const useUpdateConnetions = (queryParams) => {
+  const variationParams = useStoreState((actions) => actions.reactFlowState.variationParams)
+  const idProcessType = useStoreState((actions) => actions.reactFlowState.idProcessType)
+
+  const request = useApiRequest()
+  const base = baseUrls[variationParams?.builderService] ?? 'urlProcess'
+
+  const userData = useStoreState((state) => state.user.userData)
+  const idCompanyAccess = userData?.companies[0]?.companyId
+
+  const qry = `/${idCompanyAccess}/process-types/${idProcessType}`
+
+  return useMutation({
+    mutationFn: async (body) => {
+      const response = await request(base, qry, 'put', body, null)
+
+      return response
+    },
+    onSuccess: queryParams.onSuccess,
+    onError: queryParams.onError,
+  })
+}
+
+export default useUpdateConnetions

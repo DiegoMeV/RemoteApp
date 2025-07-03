@@ -1,0 +1,7 @@
+.chart-dynamic-container {
+  @apply flex flex-col justify-center text-center h-full max-h-[450px] rounded-lg px-5 py-2;
+}
+
+.title-chart-container {
+  @apply flex items-center min-h-[60px] rounded-t-lg pl-4;
+}

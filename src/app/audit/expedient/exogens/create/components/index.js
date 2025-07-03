@@ -1,0 +1,6 @@
+export { default as StepperAuditComponent } from './StepperAuditComponent'
+export * from './basicData'
+export * from './addFunctionarities'
+export * from './uploadDocuments'
+export * from './tableViewDocument'
+export * from './generateExpedient'

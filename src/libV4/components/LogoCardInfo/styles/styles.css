@@ -1,0 +1,15 @@
+.card {
+  @apply grid grid-cols-12 gap-4 p-8 max-w-[800px] min-w-80 rounded-lg;
+}
+.card_section_text {
+  @apply flex flex-col xs:gap-4 lg:gap-0 lg:justify-around xs:col-span-12 lg:col-span-8;
+}
+.card_title {
+  @apply text-2xl font-bold;
+}
+.card_secondary_title {
+  @apply text-gray-500;
+}
+.card_section_img {
+  @apply flex xs:justify-center lg:justify-end xs:col-span-12 lg:col-span-4;
+}

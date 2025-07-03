@@ -1,0 +1,8 @@
+export * from './personalInfoComponent'
+export * from './contactInfoComponent'
+export * from './academicInfoComponent'
+export * from './professionalTitleInfoComponent'
+export * from './addDocumentsComponent'
+export * from './typeProcessComponent'
+export * from './infoConfirmProcess'
+export { default as FormRethus } from './FormRethus'

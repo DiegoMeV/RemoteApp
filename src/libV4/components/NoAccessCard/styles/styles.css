@@ -1,0 +1,15 @@
+.access-card {
+  @apply bg-gradient-to-br from-[rgba(173,216,230,0.2)] to-[rgba(70,130,180,0.2)] h-full rounded-2xl relative flex;
+}
+
+.secondary-text {
+  @apply text-[17px] opacity-80 max-w-[310px] mb-3 xl:mb-5 mt-3;
+}
+
+.image-stack {
+  @apply flex justify-center items-center max-w-[310px] mx-auto;
+}
+
+.container-access-page {
+  @apply flex justify-center items-center h-full;
+}

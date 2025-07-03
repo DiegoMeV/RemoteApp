@@ -1,0 +1,6 @@
+export { default as AgreementDues } from './AgreementDues'
+export { default as Files } from './Files'
+export { default as ReceiptsIssued } from './ReceiptsIssued'
+export { default as Payments } from './Payments'
+export { default as DebtConceptsModal } from './DebtConceptsModal'
+export * from './tabsDetails'

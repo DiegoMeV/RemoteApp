@@ -1,0 +1,11 @@
+.componentContainer {
+  @apply h-[calc(100vh-170px)] p-5 w-full border border-solid border-[#0000000f] rounded-b-[10px];
+}
+
+.templatesContainer {
+  @apply flex flex-col max-h-[calc(100%-110px)] min-h-[calc(100%-110px)] overflow-auto gap-4 mt-4;
+}
+
+.buttonContainer {
+  @apply flex items-center justify-evenly flex-shrink-0 space-x-4 px-6;
+}

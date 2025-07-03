@@ -1,0 +1,8 @@
+export { default as useProcessTypeGroupsRequirements } from './useProcessTypeGroupsRequirements'
+export { default as useSigedocInfo } from './useSigedocInfo'
+export { default as useGetTypeRequest } from './useGetTypeRequest'
+export { default as useGetUseInformation } from './useGetUseInformation'
+export { default as useCreateRequirement } from './useCreateRequirement'
+export { default as useCreateSigedoc } from './useCreateSigedoc'
+export { default as useEntitiesInfo } from './useEntitiesInfo'
+export { default as useUpdateActivity } from './useUpdateActivity'

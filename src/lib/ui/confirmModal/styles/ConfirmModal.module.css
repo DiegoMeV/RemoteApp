@@ -1,0 +1,13 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 260px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

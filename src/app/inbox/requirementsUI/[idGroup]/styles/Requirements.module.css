@@ -1,0 +1,35 @@
+.elementContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.elementContainerGrid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.documentContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: white;
+  padding: 15px;
+}
+
+.documentContainer {
+  display: flex;
+  column-gap: 20px;
+  background-color: white;
+  padding: 15px;
+}
+
+.aditionalDocuments {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  background-color: white;
+  padding: 15px;
+  align-items: center;
+  row-gap: 20px;
+}

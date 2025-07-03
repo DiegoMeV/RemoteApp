@@ -1,0 +1,27 @@
+.login_container {
+  @apply flex items-center h-dvh w-screen;
+}
+.login_card {
+  @apply flex  xs:flex-col lg:flex-row m-5 w-full justify-center h-[680px];
+}
+.login_image {
+  @apply w-full flex justify-center items-center bg-[#D9D9D9] lg:max-w-xl p-5 max-lg:rounded-t-lg lg:rounded-l-lg;
+}
+.login_info {
+  @apply w-full p-5 flex flex-col justify-between gap-y-5 bg-white lg:max-w-md max-lg:rounded-b-lg lg:rounded-r-lg;
+}
+.login_buttons {
+  @apply grid grid-cols-2 gap-2;
+}
+.login_title {
+  @apply text-gray-500 flex justify-center;
+}
+.login_header {
+  @apply flex justify-between mt-4;
+}
+.login_header_text {
+  @apply flex flex-col gap-3 justify-evenly;
+}
+.login_footer {
+  @apply text-gray-light mt-10;
+}

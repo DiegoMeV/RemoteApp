@@ -1,0 +1,5 @@
+export * from './footerSection'
+export * from './carouselSection'
+export { default as HomeNavbar } from './HomeNavbar'
+export { default as FiltersSection } from './FiltersSection'
+export { default as FirstSection } from './FirstSection'

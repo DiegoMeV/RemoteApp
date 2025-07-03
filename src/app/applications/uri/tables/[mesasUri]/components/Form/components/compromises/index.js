@@ -1,0 +1,5 @@
+export { default as Compromises } from './Compromises'
+export { default as NewCompromise } from './NewCompromise'
+export { default as NewCompromiseButton } from './NewCompromiseButton'
+export { default as CompromisesOptions } from './CompromisesOptions'
+export { default as CompromiseContainer } from './CompromiseContainer'

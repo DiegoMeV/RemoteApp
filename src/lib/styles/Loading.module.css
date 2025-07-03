@@ -1,0 +1,36 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    width: auto;
+    height: auto;
+    animation: logo-spin infinite 2.5s linear;
+  }
+}
+
+.header {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.welcome {
+  padding-bottom: 3rem;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,7 @@
+export { default as Summary } from './Summary'
+export { default as ContentDashboard } from './ContentDashboard'
+export * from '../../applications/request/components/requestManagement'
+export * from './personalCharts'
+export * from '../../applications/request/components/managementIndicators'
+export * from '../../applications/request/components/ViewAnalyticsInformation'
+export * from './listRegistry'

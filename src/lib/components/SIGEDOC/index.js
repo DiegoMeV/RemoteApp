@@ -1,0 +1,5 @@
+export { default as FormSIGEDOC } from './FormSIGEDOC'
+export { default as AttachedDocumentsSIGEDOC } from './AttachedDocumentsSIGEDOC'
+export { default as SearchRelatedSIGEDOC } from './SearchRelatedSIGEDOC'
+export { default as ItemSearchSIGEDOC } from './ItemSearchSIGEDOC'
+export { default as FolderManagementSIGEDOC } from './FolderManagementSIGEDOC'

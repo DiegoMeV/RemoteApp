@@ -1,0 +1,28 @@
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - export NODE_OPTIONS="--max-old-space-size=4096"
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '/*'
+      headers:
+        - key: 'Content-Security-Policy'
+          value: "frame-ancestors 'none';"
+        - key: 'X-Frame-Options'
+          value: 'SAMEORIGIN'
+        - key: 'X-Content-Type-Options'
+          value: 'nosniff'
+        - key: 'Referrer-Policy'
+          value: 'same-origin'
+        - key: 'Permissions-Policy'
+          value: 'geolocation=(none)'
+        - key: 'Strict-Transport-Security'
+          value: 'max-age=31536000; includeSubDomains; preload'

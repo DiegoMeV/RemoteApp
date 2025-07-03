@@ -1,0 +1,18 @@
+.container_divider {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.container_divider__line {
+  border-top: 1px solid white;
+  flex: 1;
+  border-color: lightGray;
+}
+
+.container_divider__circular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4%;
+}

@@ -1,0 +1,23 @@
+.contentConstructor {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  width: 100%;
+  height: calc(100vh - 65px);
+}
+
+.mainSectionFlow {
+  height: 100%;
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+}
+
+.titleStyles {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 25px;
+  gap: 20px;
+}

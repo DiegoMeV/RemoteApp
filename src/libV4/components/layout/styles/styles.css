@@ -1,0 +1,48 @@
+body {
+  @apply font-sans;
+}
+.navbar {
+  @apply bg-gray-900 overflow-hidden;
+}
+.navbar a {
+  @apply float-left block text-white text-center px-4 py-3 no-underline;
+}
+.dropdown {
+  @apply float-left overflow-hidden;
+}
+.dropdown .dropbtn {
+  @apply text-lg border-none outline-none text-white px-4 py-3 bg-inherit;
+  font-family: inherit;
+}
+.dropdown-content {
+  @apply z-50 flex bg-white flex-col justify-center absolute right-0 min-w-[160px] p-5 rounded shadow-lg;
+}
+.dropdown-content a {
+  @apply px-2 py-1 flex justify-center gap-2 pt-4;
+}
+.user-data {
+  @apply p-2 flex flex-col items-center;
+}
+
+.button-user {
+  @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-3 sm:pr-0;
+}
+
+.navbar-container {
+  @apply shadow-lg w-full z-50 bg-white sticky top-0 z-50 mx-auto px-2 sm:px-6 lg:px-8 relative flex h-16 items-center justify-between;
+}
+
+.options-var {
+  @apply flex flex-1 items-center justify-center sm:items-stretch sm:justify-start;
+}
+
+.options-navbar {
+  @apply rounded-md text-sm font-medium flex flex-col items-center ml-2;
+}
+.settings-content {
+  @apply z-50  bg-white flex-col justify-center absolute right-0 min-w-[160px] p-5 rounded shadow-lg mt-5 mr-20;
+}
+
+.custom-button-class {
+  @apply flex items-center gap-2 min-h-12 w-full px-2 rounded-md hover:bg-gray-100;
+}

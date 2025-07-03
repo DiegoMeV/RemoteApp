@@ -1,0 +1,16 @@
+.containerModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  box-shadow: 24;
+  padding: 20px;
+  text-align: center;
+}
+.listItemSummary {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid #c8c4c4;
+}

@@ -1,0 +1,6 @@
+export * from './DetalleOrden'
+export * from './ObligacionPorOrdenNC'
+export * from './DepuracionRetFuente'
+export * from './ImputacionContable'
+export * from './OrdenadorPago'
+export * from './Rechazos'

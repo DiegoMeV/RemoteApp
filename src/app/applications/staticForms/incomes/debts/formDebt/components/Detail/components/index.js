@@ -1,0 +1,7 @@
+export { default as Cartera } from './Cartera'
+export { default as Acuerdos } from './Acuerdos'
+export { default as Facturas } from './Facturas'
+export { default as Pagos } from './Pagos'
+export { default as Propietarios } from './Propietarios'
+export { default as Avaluos } from './Avaluos'
+export { default as Expedientes } from './Expedientes'

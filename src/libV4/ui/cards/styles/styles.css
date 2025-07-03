@@ -1,0 +1,9 @@
+.basic_card_container {
+  @apply flex rounded-lg shadow to-backgroundWhite1-light border border-gray-200 dark:to-backgroundGray2-dark dark:border-gray-700;
+}
+.basic_card_title {
+  @apply text-lg font-semibold text-gray-800 dark:text-gray-200;
+}
+.basic_card_p {
+  @apply mb-3 font-normal text-gray-700;
+}

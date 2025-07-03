@@ -1,0 +1,18 @@
+.welcomeCard {
+  background: linear-gradient(135deg, rgba(173, 216, 230, 0.2), rgba(70, 130, 180, 0.2));
+  height: 100%;
+  border-radius: 2;
+  position: relative;
+  display: flex;
+}
+.secondaryText {
+  opacity: 0.8;
+  max-width: 310px;
+}
+.imageStack {
+  display: flex;
+  justify-content: center;
+  max-width: 310px;
+  align-items: center;
+  margin-inline: auto;
+}

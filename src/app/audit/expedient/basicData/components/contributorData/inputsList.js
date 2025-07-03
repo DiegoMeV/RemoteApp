@@ -1,0 +1,65 @@
+export const inputsList = [
+  {
+    label: 'Código',
+    name: 'code',
+    type: 'text',
+    disabled: true,
+    space: 3,
+  },
+  {
+    label: 'Matrícula',
+    name: 'registration',
+    type: 'text',
+    disabled: true,
+    space: 3,
+  },
+  {
+    label: 'Ciudad',
+    name: 'city',
+    type: 'text',
+    disabled: true,
+    space: 3,
+  },
+  {
+    label: 'Dirección',
+    name: 'address',
+    type: 'text',
+    space: 3,
+  },
+  {
+    label: 'Documento representante legal',
+    name: 'legalRepresentativeDocument',
+    type: 'text',
+    space: 3,
+  },
+  {
+    label: 'Nombre representante legal',
+    name: 'legalRepresentativeName',
+    type: 'text',
+    space: 3,
+  },
+  {
+    label: 'Celular',
+    name: 'cellphone',
+    type: 'text',
+    space: 3,
+  },
+  {
+    label: 'Teléfono de contacto',
+    name: 'contactPhone',
+    type: 'text',
+    space: 3,
+  },
+  {
+    label: 'Correo electrónico',
+    name: 'email',
+    type: 'text',
+    space: 6,
+  },
+  {
+    label: 'Tipo de documento',
+    name: 'documentType',
+    type: 'text',
+    space: 6,
+  },
+]
