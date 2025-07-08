@@ -69,8 +69,9 @@ import { StaticForms } from './staticForms'
 import { AssigmentPaymentOrder } from '@/app/applications/assigmentPaymentOrder'
 import TransferExpedients from '@/app/applications/TransferExpedients/page'
 import { PaymentOrdersReportsDates } from '@/app/applications/expenseManagementModule'
+import { Route, Routes } from 'react-router-dom'
 
-const ApplicationsRoutes = ({ Routes, Route }) => {
+const ApplicationsRoutes = () => {
   return (
     <Routes>
       <Route

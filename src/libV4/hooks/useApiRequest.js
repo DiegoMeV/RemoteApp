@@ -70,6 +70,17 @@ const useApiRequest = (includeFile) => {
     return refreshTokenPromise
   }
 
+  // Solo agregar el event listener una vez
+  if (typeof window !== 'undefined' && !window.__apiRequestStorageListenerAdded) {
+    window.addEventListener('storage', (event) => {
+      if (event.key === 'authToken') {
+        // Aquí podrías actualizar el token global si lo necesitas
+        // Por ejemplo: setTokenData({ token: event.newValue })
+      }
+    })
+    window.__apiRequestStorageListenerAdded = true
+  }
+
   const request = async (baseURL, queryURL, method = 'POST', data = null, options = {}) => {
     let currentToken = tokenData?.token
     if (currentToken && !queryURL?.includes('/auth/refreshToken')) {
@@ -97,14 +108,8 @@ const useApiRequest = (includeFile) => {
       }
     }
 
-    window.addEventListener('storage', (event) => {
-      if (event.key === 'authToken') {
-        currentToken = event.newValue
-      }
-    })
-
     const headers = {
-      Authorization: `Bearer ${tokenData?.token || ''}`,
+      Authorization: `Bearer ${currentToken || ''}`,
     }
 
     if (!includeFile) {
@@ -145,3 +150,40 @@ const useApiRequest = (includeFile) => {
 }
 
 export default useApiRequest
+
+// const useApiRequest = (includeFile) => {
+//   const tokenData = useStoreState((state) => state.token.tokenData)
+
+//   const request = async (baseURL, queryURL, method = 'POST', data = null, options = {}) => {
+//     const headers = {
+//       Authorization: `Bearer ${tokenData?.token || ''}`,
+//       'Content-Type': 'application/json',
+//     }
+
+//     const config = {
+//       method,
+//       headers,
+//       ...options,
+//     }
+
+//     if (data) {
+//       config.body = includeFile ? data : JSON.stringify(data)
+//     }
+
+//     try {
+//       const response = await fetch(`${baseURL}${queryURL}`, config)
+//       const responseBody = await response.json()
+//       if (!response.ok) {
+//         const errorMessage = responseBody?.error || response.statusText || 'Unknown error'
+//         throw new Error(errorMessage)
+//       }
+//       return responseBody
+//     } catch (error) {
+//       throw error
+//     }
+//   }
+
+//   return request
+// }
+
+// export default useApiRequest

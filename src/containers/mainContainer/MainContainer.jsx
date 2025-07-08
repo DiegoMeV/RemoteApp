@@ -1,8 +1,11 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { store, stringToObject, ThemeSynchrox, ToastSynchrox, WaterMark } from '@/lib'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { stringToObject, ThemeSynchrox, ToastSynchrox, WaterMark } from '@/lib'
 import { StoreProvider, useStoreRehydrated } from 'easy-peasy'
 import { LicenseInfo } from '@mui/x-license-pro'
 import { useEffect } from 'react'
+
+const { store } = import('host-app/easyPeasyStore') // Importing the zustand store from the host app
+const { queryClient } = import('host-app/queryClient') // Importing the QueryClient from the host app
 
 const WaitForStateRehydration = ({ children }) => {
   const isRehydrated = useStoreRehydrated()
@@ -12,16 +15,6 @@ const WaitForStateRehydration = ({ children }) => {
 LicenseInfo.setLicenseKey(`${import.meta.env.VITE_MUI_LICENSE_KEY}`)
 
 /* This code configures a React Query QueryClient, which is being used to manage and maintain the state of queries in the application. The configuration includes parameters for the number of retries in case of query errors and the time during which data is considered fresh (staleTime), which influences how often data is updated or refetched. */
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: 1, // Only 1 retry when a fetch fails.
-      // staleTime: 1000 * 60 * 30, // 30 minutes'
-
-      refetchOnWindowFocus: false,
-    },
-  },
-})
 
 const environment = Boolean(import.meta.env.VITE_DEVELOPMENT)
 

@@ -1,6 +1,5 @@
 export { default as ThemeSynchrox } from './theme'
 export * from './components'
-export * from './context'
 export * from './api'
 export * from './constants'
 export * from './ui'

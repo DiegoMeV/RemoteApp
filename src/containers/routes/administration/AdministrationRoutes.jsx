@@ -16,8 +16,9 @@ import {
   ProcessTypeByGroup,
   Roles,
 } from '@/pages'
+import { Route, Routes } from 'react-router-dom'
 
-const AdministrationRoutes = ({ Routes, Route }) => {
+const AdministrationRoutes = () => {
   return (
     <Routes>
       <Route
