@@ -5,6 +5,7 @@ import federation from '@originjs/vite-plugin-federation'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
+  console.error('VITE_ADMIN_MF:', env.VITE_ADMIN_MF)
 
   return {
     server: {
