@@ -1,9 +1,6 @@
 import { createTheme } from '@mui/material/styles'
-import { stringToObject } from '../funcs'
 
 const createCustomTheme = (mode) => {
-  const themeApp = stringToObject(import.meta.env.VITE_THEME_APPLICATION, 'VITE_THEME_APPLICATION')
-
   // Ahora puedes usar themeApp de forma segura
   const theme = createTheme({
     palette: {
@@ -12,7 +9,7 @@ const createCustomTheme = (mode) => {
         ? {
             // palette values for light mode
             primary: {
-              main: themeApp?.primary || '#1a73e8',
+              main: '#1a73e8',
             },
             secondary: {
               main: '#757575',
@@ -48,13 +45,13 @@ const createCustomTheme = (mode) => {
     typography: {
       fontSize: 12,
       customTitle: {
-        color: themeApp?.primary ?? '#7f7f7f',
+        color: '#7f7f7f',
         fontWeight: 700,
         fontSize: '1.375rem', // 22px en rem
         display: 'block',
       },
       customSubtitle: {
-        color: themeApp?.primary ?? '#7f7f7f',
+        color: '#7f7f7f',
         fontWeight: 500,
         fontSize: '1.125rem', // 18px en rem
         display: 'block',

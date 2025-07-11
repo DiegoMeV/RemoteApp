@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useStoreState } from 'easy-peasy'
 
 import CssBaseline from '@mui/material/CssBaseline'
-import { ThemeProvider } from '@mui/material'
+import { StyledEngineProvider, ThemeProvider } from '@mui/material'
 
 import createCustomTheme from './TemaConfig'
 
@@ -16,6 +16,7 @@ const ThemeSynchrox = ({ children }) => {
 
   // Creation of the customized theme
   const theme = createCustomTheme(dark)
+  console.error('🚀 ~ ThemeSynchrox ~ theme:', theme)
 
   // Effect to update the background of the body according to the theme
   useEffect(() => {
@@ -29,15 +30,17 @@ const ThemeSynchrox = ({ children }) => {
   }, [dark, theme])
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div
-        className='App'
-        style={{ backgroundColor: theme.palette.background.default, minHeight: '100vh' }}
-      >
-        {children}
-      </div>
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div
+          className='App'
+          style={{ backgroundColor: theme.palette.background.default, minHeight: '100vh' }}
+        >
+          {children}
+        </div>
+      </ThemeProvider>
+    </StyledEngineProvider>
   )
 }
 

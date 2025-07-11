@@ -42,6 +42,18 @@ export default defineConfig({
         tailwindcss: {
           singleton: true,
         },
+        '@mui/material': {
+          singleton: false,
+        },
+        '@mui/icons-material': {
+          singleton: false,
+        },
+        '@emotion/react': {
+          singleton: false,
+        },
+        '@emotion/styled': {
+          singleton: false,
+        },
       },
     }),
   ],
