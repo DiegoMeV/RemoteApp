@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3001 --strictPort",
-    "build": "vite build",
+    "build": "vite build && node generate-headers.js",
     "prepare": "husky",
     "commit": "commit",
     "lint": "eslint .",
