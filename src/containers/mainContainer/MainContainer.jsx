@@ -1,11 +1,9 @@
-import { QueryClientProvider } from '@tanstack/react-query'
-import { stringToObject, ThemeSynchrox, ToastSynchrox, WaterMark } from '@/lib'
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+
+import { store, stringToObject, ThemeSynchrox, ToastSynchrox, WaterMark } from '@/lib'
 import { StoreProvider, useStoreRehydrated } from 'easy-peasy'
 import { LicenseInfo } from '@mui/x-license-pro'
 import { useEffect } from 'react'
-
-const { store } = import('host-app/easyPeasyStore') // Importing the zustand store from the host app
-const { queryClient } = import('host-app/queryClient') // Importing the QueryClient from the host app
 
 const WaitForStateRehydration = ({ children }) => {
   const isRehydrated = useStoreRehydrated()
@@ -40,6 +38,17 @@ const MainContainer = ({ children }) => {
   useEffect(() => {
     localStorage.removeItem('app-store')
   }, [])
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: 1, // Only 1 retry when a fetch fails.
+        // staleTime: 1000 * 60 * 30, // 30 minutes'
+
+        refetchOnWindowFocus: false,
+      },
+    },
+  })
 
   return (
     <StoreProvider store={store}>

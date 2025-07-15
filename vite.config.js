@@ -21,9 +21,6 @@ export default defineConfig(({ mode }) => {
           './Roles': './src/pages/administration/roles/Roles.jsx',
           './AplicationsRoutes': './src/containers/routes/applications/ApplicationsRoutes.jsx',
         },
-        remotes: {
-          'host-app': `${env.VITE_ADMIN_MF}/assets/remoteEntry.js`,
-        },
         shared: {
           react: {
             singleton: true,
