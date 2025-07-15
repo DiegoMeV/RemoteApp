@@ -1,0 +1,10 @@
+const fs = require('fs');
+const allowedOrigin = process.env.VITE_ADMIN_MF || '*';
+
+const headers = `
+/assets/remoteEntry.js
+  Access-Control-Allow-Origin: ${allowedOrigin}
+`;
+
+fs.writeFileSync('./public/_headers', headers.trim());
+console.log('Generated _headers with origin:', allowedOrigin);
